@@ -7,10 +7,14 @@ const returnRndmSign = () => {
 //object creation to store multitude of arrays
 const big3Generator = (number, sun, moon, rising) => {
     return {
-        number:number,
+        number: number,
         sun: sun,
         moon: moon,
         rising: rising,
+
+        buildMessage() {
+            console.log(`Your sun sign is ${sun}, which is your identity. Your moon sign is ${moon}, which is your feelings and emotions. Your rising sign is ${rising}, which reflects physical appearance.`)
+        }
     }
 }
 
@@ -19,5 +23,10 @@ const big3Generator = (number, sun, moon, rising) => {
 
 const ins1 = big3Generator(1, returnRndmSign(), returnRndmSign(), returnRndmSign());
 
-//console.log(ins1);
+ins1.buildMessage();
+
+
+
+
+
 
